@@ -1,12 +1,10 @@
 import {Router} from "express";
+import { ControllersCitys } from "./../controllers";
 
 const router = Router();
 
-router.get("/api", (req, res) => {return res.send("Hello!");});
+router.get("/", (req, res) => {return res.send("Working!");});
 
-router.post("/api", (req, res) => {
-	console.log(req.body);
-	return res.json(req.body);
-});
+router.post("/api", ControllersCitys.create);
 
 export {router};
