@@ -5,6 +5,6 @@ const router = Router();
 
 router.get("/", (req, res) => {return res.send("Working!");});
 
-router.post("/api", ControllersCitys.create);
+router.post("/api",ControllersCitys.createBodyValidator, ControllersCitys.create);
 
 export {router};
